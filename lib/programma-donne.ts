@@ -133,7 +133,7 @@ export const chapters: Chapter[] = [
     slug: "capitolo-8",
     number: 8,
     title: "Inginocchiati solo davanti a Dio",
-    tesi: "Ogni donna si inginocchia davanti a qualcosa, che lo ammetta o no. La devozione è scegliere davanti a cosa.",
+    tesi: "Ogni donna si inginocchia davanti a qualcosa, che lo ammetta o no. La devozione è scegliere davanti a cosa. Questo capitolo è identico, nei suoi comandi, a quello che chiude la guida degli uomini, perché la devozione non ha una versione femminile.",
     menzogna:
       "Ti hanno tolto la Messa e ti hanno venduto i tarocchi. La prima delle vergogne cucite addosso alla tua generazione riguarda la fede, raccontata come superstizione, e al suo posto ti hanno proposto una spiritualità da carrello, i cristalli, gli oroscopi, il manifesting, pratiche che non ti chiedono niente e quindi non ti danno niente. Ma una fede senza pratica è un'opinione, e le opinioni non reggono una donna nel giorno peggiore della sua vita. Eppure la marea sta girando: in Francia a Pasqua 2025 sono stati battezzati più di 17.800 catecumeni, con gli adulti in crescita del 45% in un anno, e una generazione cresciuta senza Dio lo sta cercando da sola.",
     protocollo: [
