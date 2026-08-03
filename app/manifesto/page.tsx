@@ -207,7 +207,7 @@ export default function ManifestoPage() {
             Invertire l&apos;ordine produce ricchi infelici e imperi di sabbia.
           </p>
           <p className={p}>
-            &ldquo;Qualunque cosa facciate, fatela di cuore, come per il Signore&rdquo; (Colossesi
+            &ldquo;Qualunque cosa facciate, fatela di buon animo, come per il Signore&rdquo; (Colossesi
             3,23). Costruire un&apos;impresa onesta è un atto spirituale. Costruire una famiglia è un
             atto di fede nel futuro. Farlo in Italia, oggi, è un atto militante.
           </p>

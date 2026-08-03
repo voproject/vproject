@@ -15,7 +15,7 @@ export const chapters: Chapter[] = [
       "Guarda in faccia le tue amicizie. Se le tue amiche applaudono il tuo peggio e ridono del tuo desiderio di famiglia, non sono alleate ma un comitato di sabotaggio con l'aperitivo in mano, e nessuna donna diventa ciò che vuole diventare dentro una cerchia che premia il contrario.",
     ],
     ancora:
-      "La donna forte di Proverbi 31,10-31, “ben più delle perle è il suo valore”. La Scrittura chiude il libro dei Proverbi con il ritratto di una donna che lavora, commercia, governa la casa e viene lodata alle porte della città: la tradizione non ha mai chiesto donne spente, ha sempre chiesto donne forti nel posto giusto.",
+      "La donna forte di Proverbi 31,10-31, “ben superiore alle perle è il suo valore”. La Scrittura chiude il libro dei Proverbi con il ritratto di una donna che lavora, commercia, governa la casa e viene lodata alle porte della città: la tradizione non ha mai chiesto donne spente, ha sempre chiesto donne forti nel posto giusto.",
     errore:
       "Confondere la forza con la durezza. La donna che si corazza per sopravvivere al mondo che le hanno costruito non sta diventando più forte, sta solo diventando più sola, e la corazza che oggi la protegge è la stessa che domani non lascerà entrare nessuno.",
   },
@@ -89,7 +89,7 @@ export const chapters: Chapter[] = [
       "Litigate bene, perché litigherete: mai davanti ai figli, mai per vincere ai punti, mai toccando ciò che l'altro ti ha confidato nei momenti fragili. Il matrimonio non è l'assenza di conflitto, è il conflitto messo al servizio di qualcosa che vale più del conflitto.",
     ],
     ancora:
-      "Efesini 5,22 e 5,25 letti in coppia, sempre e solo in coppia. E Galati 3,28: “non c'è più uomo né donna, perché tutti voi siete uno in Cristo Gesù”. La distinzione dei ruoli vive dentro un'uguaglianza di valore che la Chiesa proclama da duemila anni, da quando San Paolo affidò la lettera più importante che abbia scritto, quella ai Romani, alle mani di una donna, Febe.",
+      "Efesini 5,22 e 5,25 letti in coppia, sempre e solo in coppia. E Galati 3,28: “non c'è maschio e femmina, perché tutti voi siete uno in Cristo Gesù”. La distinzione dei ruoli vive dentro un'uguaglianza di valore che la Chiesa proclama da duemila anni, da quando San Paolo affidò la lettera più importante che abbia scritto, quella ai Romani, alle mani di una donna, Febe.",
     errore:
       "Pretendere il pacchetto tradizionale da lui senza offrire la parte tradizionale tua, o accettare la tua senza pretendere la sua. Il patto o è intero o non è, e ogni versione dimezzata finisce nello stesso posto: nel rancore.",
   },
@@ -107,7 +107,7 @@ export const chapters: Chapter[] = [
       "Circondati di madri, non solo di coetanee. Chi ci è già passata ti dice la verità intera, la fatica vera e la gioia vera, e ti accorgerai di una cosa che nessuna statistica registra: quasi nessuna madre ti dirà che tornerebbe indietro, mentre di donne che rimpiangono di aver aspettato troppo ne incontrerai molte.",
     ],
     ancora:
-      "Il sì di Maria, “Eccomi, sono la serva del Signore” (Luca 1,38). Il sì più potente della storia è stato detto da una ragazza di Nazareth davanti a un progetto che scombinava tutti i suoi piani, e la storia dell'Occidente gira attorno a quel consenso da duemila anni.",
+      "Il sì di Maria, “Ecco la serva del Signore: avvenga per me secondo la tua parola” (Luca 1,38). Il sì più potente della storia è stato detto da una ragazza di Nazareth davanti a un progetto che scombinava tutti i suoi piani, e la storia dell'Occidente gira attorno a quel consenso da duemila anni.",
     errore:
       "Trasformare la maternità in un idolo o in una gara. Si desidera e si accoglie, non si esige, perché anche il quando appartiene a Dio: se tarda o se non arriva, il tuo valore non era lì in ostaggio, e una vita feconda ha più forme di quante ne conti l'anagrafe.",
   },
@@ -125,7 +125,7 @@ export const chapters: Chapter[] = [
       "Studia le tue madri nella fede, perché chi ti dice che il cattolicesimo disprezza le donne non ha letto la storia del cattolicesimo: la prima testimone della Risurrezione è una donna, le badesse governavano monasteri e territori nei secoli in cui altrove le donne non contavano niente, e quattro donne sono Dottori della Chiesa, con Caterina da Siena che scriveva ai papi e i papi che la ascoltavano.",
     ],
     ancora:
-      "Santa Monica, che pregò per anni per un figlio che sembrava perduto e ottenne sant'Agostino. E San Paolo, che ricorda a Timoteo la fede “che fu prima nella tua nonna Loide e in tua madre Eunice” (2 Timoteo 1,5): la fede passa di madre in figlio da sempre, ed è per questo che chi vuole spegnere una civiltà comincia sempre dalle madri.",
+      "Santa Monica, che pregò per anni per un figlio che sembrava perduto e ottenne sant'Agostino. E San Paolo, che ricorda a Timoteo la fede “che ebbero anche tua nonna Lòide e tua madre Eunìce” (2 Timoteo 1,5): la fede passa di madre in figlio da sempre, ed è per questo che chi vuole spegnere una civiltà comincia sempre dalle madri.",
     errore:
       "Fare della fede un fatto puramente privato. La fede che non si vede non si trasmette, perché i figli imparano ciò che ti vedono fare e non ciò che ti sentono dire, e una madre che prega davanti ai figli insegna più teologia di cento catechismi delegati.",
   },

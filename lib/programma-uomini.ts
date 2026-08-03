@@ -54,7 +54,7 @@ export const chapters: Chapter[] = [
       "E ricorda perché lo fai: l'impresa serve la famiglia e la famiglia serve Dio, nell'ordine. Quando ti dicono che fare impresa da giovani in Italia è impossibile, rispondi che è soltanto raro, e che raro e impossibile non sono sinonimi.",
     ],
     ancora:
-      "La parabola dei talenti (Matteo 25,14-30), dove l'unico condannato è il servo che ha seppellito quello che aveva ricevuto, per paura. E San Paolo: “Qualunque cosa facciate, fatela di cuore, come per il Signore” (Colossesi 3,23). Costruire un'impresa onesta è un atto spirituale, non una deroga alla fede.",
+      "La parabola dei talenti (Matteo 25,14-30), dove l'unico condannato è il servo che ha seppellito quello che aveva ricevuto, per paura. E San Paolo: “Qualunque cosa facciate, fatela di buon animo, come per il Signore” (Colossesi 3,23). Costruire un'impresa onesta è un atto spirituale, non una deroga alla fede.",
     errore:
       "Inseguire i soldi come fine. Sono un mezzo per una famiglia, per la libertà, per opere che restano, e con il fine sbagliato arrivi ricco e vuoto, che è soltanto un altro modo di fallire, più comodo da fotografare.",
   },
@@ -127,7 +127,7 @@ export const chapters: Chapter[] = [
       "E guarda i segnali, perché la marea sta già girando: in Francia a Pasqua 2025 sono stati battezzati più di 17.800 catecumeni, con gli adulti in crescita del 45% in un anno, il dato più alto mai registrato dalla Conferenza episcopale francese. Una generazione cresciuta senza Dio lo sta cercando da sola, e tu puoi essere di quelli che aprono la porta o di quelli che guardano.",
     ],
     ancora:
-      "“Chi vorrà salvare la propria vita, la perderà; ma chi perderà la propria vita per causa mia, la troverà” (Matteo 16,25).",
+      "“Chi vuole salvare la propria vita, la perderà; ma chi perderà la propria vita per causa mia, la troverà” (Matteo 16,25).",
     errore:
       "La missione come estetica, simboli nel profilo e zero opere. La bandiera che non ti costa niente non dice niente, e il sistema non teme chi posta: teme chi edifica.",
   },
