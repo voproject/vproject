@@ -47,7 +47,7 @@ export function VSLSection() {
             viewport={{ once: true }}
             className="text-lg text-foreground/80 text-center font-serif italic"
           >
-            Tre parole che non dovrebbero stare insieme. Eppure ecco perché questo progetto esiste — e come cambiano tutto.
+            Non è un video di benvenuto. È la dichiarazione da cui parte tutto quello che segue.
           </motion.p>
         </motion.div>
       </div>

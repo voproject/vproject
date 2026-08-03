@@ -76,21 +76,22 @@ export function CathedralHero() {
         ref={titleRef}
         className="relative z-30 h-full flex flex-col items-center justify-center text-center px-4"
       >
-        <Image
-          src="/logo-volpinveritas.png"
-          alt="VolpinVeritas"
-          width={68}
-          height={68}
-          className="mb-6"
-          priority
-        />
-        <h1 className="font-display text-3xl xs:text-4xl sm:text-6xl lg:text-7xl tracking-[0.02em] sm:tracking-[0.04em] text-foreground px-2">
+        <h1
+          className="font-display text-3xl xs:text-4xl sm:text-6xl lg:text-7xl tracking-[0.02em] sm:tracking-[0.04em] text-foreground px-2"
+          style={{ textShadow: "0 2px 24px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)" }}
+        >
           VOLPINVERITAS
         </h1>
-        <p className="mt-5 font-serif italic text-lg sm:text-xl text-secondary">
+        <p
+          className="mt-5 font-serif italic text-lg sm:text-xl text-foreground"
+          style={{ textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,0.95)" }}
+        >
           Imprenditore. Cattolico. Militante.
         </p>
-        <p className="mt-2 font-serif text-base text-foreground/70">
+        <p
+          className="mt-2 font-serif text-base text-foreground"
+          style={{ textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,0.95)" }}
+        >
           Ricostruiamo la fede e l&apos;Italia.
         </p>
 

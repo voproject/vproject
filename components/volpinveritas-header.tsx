@@ -35,7 +35,7 @@ export function VolpinVeritasHeader() {
             rel="noopener noreferrer"
             className="px-4 py-2 font-display text-xs tracking-[0.1em] bg-primary text-primary-foreground border border-secondary/30 hover:border-secondary/60 hover:bg-primary/90 transition-colors"
           >
-            TELEGRAM
+            UNISCITI
           </a>
         </nav>
       </div>

@@ -10,9 +10,9 @@ export function VolpinFooter() {
             Noi proponiamo, Dio dispone
           </p>
 
-          {/* Year and Attribution */}
+          {/* Attribution */}
           <p className="text-sm text-foreground/50 font-display tracking-wide">
-            {new Date().getFullYear()} · VOLPINVERITAS
+            VOLPINVERITAS
           </p>
 
           {/* Minimal Links */}
