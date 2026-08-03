@@ -22,12 +22,18 @@ export function VolpinVeritasHeader() {
         </Link>
 
         {/* Navigation */}
-        <nav className="flex items-center gap-8">
+        <nav className="flex items-center gap-5 sm:gap-8">
           <Link
             href="/manifesto"
             className="font-serif text-sm text-foreground/70 hover:text-secondary transition-colors"
           >
             Manifesto
+          </Link>
+          <Link
+            href="/programma"
+            className="font-serif text-sm text-foreground/70 hover:text-secondary transition-colors"
+          >
+            Programma
           </Link>
           <a
             href="https://t.me/volpinveritas"

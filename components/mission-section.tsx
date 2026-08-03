@@ -73,18 +73,26 @@ export function MissionSection() {
             sa che la dipendenza, sotto qualunque forma si presenti, resta sempre una forma di servitù.
           </motion.p>
 
-          {/* Link to full manifesto */}
+          {/* Links to manifesto and programma */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.6 }}
             viewport={{ once: true }}
+            className="flex flex-col sm:flex-row gap-5 sm:gap-10"
           >
             <a
               href="/manifesto"
-              className="inline-flex items-center gap-2 text-sm font-display tracking-[0.1em] text-secondary border-b border-secondary/40 pb-1 hover:border-secondary transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-display tracking-[0.1em] text-secondary border-b border-secondary/40 pb-1 hover:border-secondary transition-colors self-start"
             >
               LEGGI IL MANIFESTO COMPLETO
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href="/programma"
+              className="inline-flex items-center gap-2 text-sm font-display tracking-[0.1em] text-secondary border-b border-secondary/40 pb-1 hover:border-secondary transition-colors self-start"
+            >
+              SCOPRI IL PROGRAMMA
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </motion.div>

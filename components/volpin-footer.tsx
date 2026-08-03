@@ -25,6 +25,13 @@ export function VolpinFooter() {
             </a>
             <span className="text-secondary/40">✦</span>
             <a
+              href="/programma"
+              className="hover:text-secondary transition-colors"
+            >
+              Programma
+            </a>
+            <span className="text-secondary/40">✦</span>
+            <a
               href="https://t.me/volpinveritas"
               target="_blank"
               rel="noopener noreferrer"

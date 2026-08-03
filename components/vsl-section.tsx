@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { ArrowRight } from "lucide-react"
 
 export function VSLSection() {
   return (
@@ -49,6 +50,25 @@ export function VSLSection() {
           >
             Non è un video di benvenuto. È la dichiarazione da cui parte tutto quello che segue.
           </motion.p>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center pt-2"
+          >
+            <a
+              href="https://t.me/volpinveritas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-display text-sm tracking-[0.1em] border border-secondary/40 hover:bg-primary/90 hover:border-secondary/70 transition-all duration-300 group"
+            >
+              UNISCITI ALLA VERITÀ
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </motion.div>
         </motion.div>
       </div>
     </section>
