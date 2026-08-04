@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { VolpinVeritasHeader } from "@/components/volpinveritas-header"
 import { VolpinFooter } from "@/components/volpin-footer"
+import { EmailSignup } from "@/components/email-signup"
 import { ProgrammaDonneContent } from "@/components/programma-donne-content"
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function ProgrammaDonnePage() {
       <article className="pt-32 pb-24 px-4 sm:px-6 lg:px-8">
         <ProgrammaDonneContent />
       </article>
+      <EmailSignup />
       <VolpinFooter />
     </main>
   )

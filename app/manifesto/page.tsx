@@ -1,5 +1,6 @@
 import { VolpinVeritasHeader } from "@/components/volpinveritas-header"
 import { VolpinFooter } from "@/components/volpin-footer"
+import { EmailSignup } from "@/components/email-signup"
 import { SectionDivider } from "@/components/section-divider"
 import { ManifestoSectionHeader } from "@/components/manifesto-section-header"
 import { ManifestoCredo } from "@/components/manifesto-credo"
@@ -281,9 +282,7 @@ export default function ManifestoPage() {
 
           <div className="text-center pt-8 space-y-8">
             <a
-              href="https://t.me/volpinveritas"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#unisciti"
               className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-display text-sm tracking-[0.1em] border border-secondary/40 hover:bg-primary/90 hover:border-secondary/70 transition-all duration-300 group"
             >
               UNISCITI ALLA VERITÀ
@@ -296,6 +295,8 @@ export default function ManifestoPage() {
           </div>
         </div>
       </article>
+
+      <EmailSignup />
 
       <VolpinFooter />
     </main>

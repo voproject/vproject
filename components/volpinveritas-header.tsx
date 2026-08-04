@@ -36,9 +36,7 @@ export function VolpinVeritasHeader() {
             Programma
           </Link>
           <a
-            href="https://t.me/volpinveritas"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#unisciti"
             className="px-4 py-2 font-display text-xs tracking-[0.1em] bg-primary text-primary-foreground border border-secondary/30 hover:border-secondary/60 hover:bg-primary/90 transition-colors"
           >
             UNISCITI

@@ -3,6 +3,7 @@ import { CathedralHero } from "@/components/cathedral-hero"
 import { VSLSection } from "@/components/vsl-section"
 import { SectionDivider } from "@/components/section-divider"
 import { MissionSection } from "@/components/mission-section"
+import { EmailSignup } from "@/components/email-signup"
 import { VolpinFooter } from "@/components/volpin-footer"
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <VSLSection />
       <SectionDivider />
       <MissionSection />
+      <EmailSignup />
       <VolpinFooter />
     </main>
   )

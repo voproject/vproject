@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono, PT_Mono, Cinzel, EB_Garamond } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { EcclesiasticalFrame } from "@/components/ecclesiastical-frame"
+import { SignupAnchorScroll } from "@/components/signup-anchor-scroll"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -50,6 +51,7 @@ export default function RootLayout({
     <html lang="it" className={`${_ptMono.variable} ${_cinzel.variable} ${_ebGaramond.variable}`}>
       <body className="font-sans antialiased min-h-screen">
         <EcclesiasticalFrame />
+        <SignupAnchorScroll />
         {children}
         <Analytics />
       </body>
