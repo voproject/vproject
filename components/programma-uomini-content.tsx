@@ -55,10 +55,14 @@ export function ProgrammaUominiContent() {
       closing={
         <>
           <p className={guideBody}>
-            Otto capitoli, un solo movimento: costruire. Nella vita di un uomo l&apos;ordine è questo,
-            la competenza, il corpo, i soldi, il silenzio, la donna, i figli, la missione e, a reggere
-            tutto quanto, Dio, e nessuno percorrerà questa strada al posto tuo. Ma non sei obbligato a
-            percorrerla da solo.
+            Otto capitoli, un solo movimento: costruire. I capitoli puoi leggerli nell&apos;ordine che
+            preferisci, ma le priorità di una vita no, quelle un ordine ce l&apos;hanno: prima Dio,
+            poi tua moglie, poi i figli, poi la famiglia e gli amici. Finché quest&apos;ordine regge,
+            ogni cosa trova il suo posto; quando si inverte, anche le cose buone cominciano a farsi
+            male tra loro.
+          </p>
+          <p className={guideBody}>
+            Nessuno percorrerà questa strada al posto tuo. Ma non sei obbligato a percorrerla da solo.
           </p>
           <p className={guideBody}>
             Questa pagina è nata dalle domande vere che arrivano nei messaggi, e continuerà a crescere
