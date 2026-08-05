@@ -96,35 +96,6 @@ export function MissionSection() {
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </motion.div>
-
-          {/* Social links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.8 }}
-            viewport={{ once: true }}
-            className="pt-8 text-center border-t border-secondary/15"
-          >
-            <div className="flex items-center justify-center gap-6 pt-2 text-sm font-serif">
-              <a
-                href="https://instagram.com/volpinveritas"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/60 hover:text-secondary transition-colors"
-              >
-                Instagram @volpinveritas
-              </a>
-              <span className="text-secondary/40">✦</span>
-              <a
-                href="https://tiktok.com/@volpinveritas"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/60 hover:text-secondary transition-colors"
-              >
-                TikTok @volpinveritas
-              </a>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
