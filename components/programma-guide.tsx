@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState, type ReactNode } from "react"
-import { ArrowRight } from "lucide-react"
 import {
   Accordion,
   AccordionContent,
@@ -157,19 +156,7 @@ export function ProgrammaGuide({
       </Accordion>
 
       {/* Closing */}
-      <section className="mt-16 pt-10 border-t border-secondary/20 space-y-6">
-        {closing}
-
-        <div className="text-center pt-6">
-          <a
-            href="#unisciti"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-display text-sm tracking-[0.1em] border border-secondary/40 hover:bg-primary/90 hover:border-secondary/70 transition-all duration-300 group"
-          >
-            UNISCITI ALLA VERITÀ
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
-        </div>
-      </section>
+      <section className="mt-16 pt-10 border-t border-secondary/20 space-y-6">{closing}</section>
 
       {/* Sources */}
       <Accordion type="single" collapsible className="mt-14">

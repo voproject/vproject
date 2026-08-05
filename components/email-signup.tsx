@@ -27,6 +27,12 @@ export function EmailSignup() {
           continua ogni giorno, senza algoritmo e senza padroni.
         </p>
 
+        <p className="font-display text-sm tracking-[0.15em] text-foreground/70 pt-2">
+          Unisciti oggi.
+          <br />
+          Non quando sarà troppo tardi.
+        </p>
+
         <form
           action={`https://app.kit.com/forms/${KIT_FORM_ID}/subscriptions`}
           method="post"

@@ -4,7 +4,6 @@ import { EmailSignup } from "@/components/email-signup"
 import { SectionDivider } from "@/components/section-divider"
 import { ManifestoSectionHeader } from "@/components/manifesto-section-header"
 import { ManifestoCredo } from "@/components/manifesto-credo"
-import { ArrowRight } from "lucide-react"
 
 const p = "font-serif text-lg text-foreground/85 leading-relaxed"
 const subHeader = "font-display text-sm text-secondary tracking-[0.2em] mt-10 mb-3"
@@ -280,15 +279,7 @@ export default function ManifestoPage() {
             Quando le piattaforme ci cancellano, qui ci ritroviamo.
           </p>
 
-          <div className="text-center pt-8 space-y-8">
-            <a
-              href="#unisciti"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-display text-sm tracking-[0.1em] border border-secondary/40 hover:bg-primary/90 hover:border-secondary/70 transition-all duration-300 group"
-            >
-              UNISCITI ALLA VERITÀ
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-
+          <div className="text-center pt-8">
             <p className="font-serif italic text-lg text-foreground/70">
               Noi proponiamo, Dio dispone.
             </p>
