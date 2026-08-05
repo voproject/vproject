@@ -11,7 +11,16 @@ import { ArrowRight } from "lucide-react"
  */
 const KIT_FORM_ID = "9765171"
 
-export function EmailSignup() {
+type Props = {
+  /**
+   * The closing line ("Se ti hanno dato dell'estremista...") is also the last
+   * line of the manifesto's own Epilogo, so that page passes false to avoid
+   * printing it twice on the same screen.
+   */
+  showClosingLine?: boolean
+}
+
+export function EmailSignup({ showClosingLine = true }: Props) {
   return (
     <section
       id="unisciti"
@@ -32,6 +41,13 @@ export function EmailSignup() {
           <br />
           Non quando sarà troppo tardi.
         </p>
+
+        {showClosingLine && (
+          <p className="font-serif italic text-lg text-foreground/90 leading-relaxed">
+            Se ti hanno dato dell&apos;estremista perché credi in Dio, nella famiglia e nel lavoro,
+            non sei estremista. Sei rimasto in piedi mentre tutti si inginocchiavano alla corrente.
+          </p>
+        )}
 
         <form
           action={`https://app.kit.com/forms/${KIT_FORM_ID}/subscriptions`}

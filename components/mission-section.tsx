@@ -97,20 +97,14 @@ export function MissionSection() {
             </a>
           </motion.div>
 
-          {/* Epilogue closer + CTA */}
+          {/* Social links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.8 }}
             viewport={{ once: true }}
-            className="pt-8 space-y-8 text-center border-t border-secondary/15"
+            className="pt-8 text-center border-t border-secondary/15"
           >
-            <p className="font-serif italic text-xl text-foreground/90 max-w-lg mx-auto leading-relaxed">
-              Se ti hanno dato dell&apos;estremista perché credi in Dio, nella famiglia e nel lavoro,
-              non sei estremista. Sei rimasto in piedi mentre tutti si inginocchiavano alla corrente.
-            </p>
-
-            {/* Secondary CTAs */}
             <div className="flex items-center justify-center gap-6 pt-2 text-sm font-serif">
               <a
                 href="https://instagram.com/volpinveritas"

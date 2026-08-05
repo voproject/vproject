@@ -287,7 +287,7 @@ export default function ManifestoPage() {
         </div>
       </article>
 
-      <EmailSignup />
+      <EmailSignup showClosingLine={false} />
 
       <VolpinFooter />
     </main>
