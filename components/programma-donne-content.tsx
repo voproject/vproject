@@ -16,9 +16,9 @@ export function ProgrammaDonneContent() {
         <>
           <p className={guideBody}>
             Questa pagina la scrive un uomo, e te lo dico subito perché tu possa decidere liberamente
-            se fidarti: ho ventun anni, un&apos;azienda, laureato e una fede che non nascondo, e non
-            pretendo di sapere cosa si prova a essere te. Quello che so è quello che vedo, e vedo una
-            generazione di ragazze a cui è stato promesso tutto, la carriera, la libertà,
+            se fidarti: ho ventun anni, un&apos;azienda, laureato e una fede che non nascondo. Non
+            pretendo di sapere cosa si prova a essere te. Posso dirti però quello che vedo: una
+            generazione di ragazze a cui è stato promesso tutto: la carriera, la libertà,
             l&apos;indipendenza da chiunque e da qualunque legame, e che invece di svegliarsi
             realizzata si è svegliata stanca, perché in Italia più di uno studente su due dichiara
             ansia o tristezza ricorrente e nessuno si ferma mai a chiedersi se per caso la promessa
@@ -37,10 +37,10 @@ export function ProgrammaDonneContent() {
             lo stesso pollice e chiama esperienza quella che è solo erosione; c&apos;è la girlboss in
             burnout, che ha fatto tutto giusto secondo il manuale che le hanno dato e non capisce
             perché la domenica sera si sente vuota; c&apos;è l&apos;ansiosa cronica, che ha smesso di
-            sperare in qualcosa di stabile e chiama questa resa realismo. E poi c&apos;è la custode,
-            che ha smesso di chiedere il permesso di essere donna e costruisce una casa, una fede e
-            una famiglia come si costruisce un regno. Questa guida esiste per accompagnarti verso la
-            quarta, da qualunque delle prime tre tu stia partendo. I numeri di come siamo arrivati fin
+            sperare in qualcosa di stabile e chiama questa resa realismo. E poi c&apos;è la più rara:
+            la custode, che ha smesso di chiedere il permesso di essere donna e costruisce una casa,
+            una fede e una famiglia come si costruisce un regno. Questa guida esiste per cercare di
+            accompagnarti verso la quarta, da qualunque delle prime tre tu stia partendo. I numeri di come siamo arrivati fin
             qui li trovi nel{" "}
             <Link
               href="/manifesto"
@@ -62,10 +62,14 @@ export function ProgrammaDonneContent() {
       closing={
         <>
           <p className={guideBody}>
-            Otto capitoli, un solo movimento: custodire ciò che vale. Nella vita di una donna
-            l&apos;ordine è questo, te stessa, il corpo, la casa, l&apos;uomo, il patto, i figli, la
-            fede e, a reggere tutto quanto, Dio, e nessuno percorrerà questa strada al posto tuo. Ma
-            non sei obbligata a percorrerla da sola.
+            Otto capitoli, un solo movimento: custodire ciò che vale. I capitoli puoi leggerli
+            nell&apos;ordine che preferisci, ma le priorità di una vita no, quelle un ordine ce
+            l&apos;hanno: prima Dio, poi tuo marito, poi i figli, poi la famiglia e gli amici. Finché
+            quest&apos;ordine regge, ogni cosa trova il suo posto; quando si inverte, anche le cose
+            buone cominciano a farsi male tra loro.
+          </p>
+          <p className={guideBody}>
+            Nessuno percorrerà questa strada al posto tuo. Ma non sei obbligata a percorrerla da sola.
           </p>
           <p className={guideBody}>
             Questa pagina è la gemella di{" "}

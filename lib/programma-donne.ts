@@ -22,7 +22,7 @@ export const chapters: Chapter[] = [
   {
     slug: "capitolo-2",
     number: 2,
-    title: "Il tuo corpo non è contenuto",
+    title: "Il tuo corpo non è un contenuto",
     tesi: "L'algoritmo monetizza la tua immagine e ti lascia il conto. Il pudore non è censura: è selezione.",
     menzogna:
       "Ti hanno detto che mostrare è potere, che il pudore è repressione e che la tua immagine è un capitale da far fruttare, e l'hanno detto proprio le piattaforme che su quella immagine guadagnano. L'economia dell'attenzione paga in like e riscuote in ansia, e i numeri del conto sono pubblici: secondo l'OCSE il 66% dei quindicenni italiani riporta disturbi ricorrenti legati al malessere psicologico, il dato più alto di tutta l'Unione Europea. La generazione più fotografata della storia è anche quella che si piace di meno, e le due cose non sono una coincidenza.",
