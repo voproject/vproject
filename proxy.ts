@@ -16,6 +16,8 @@ export function proxy(request: NextRequest) {
 
   const isExempt =
     pathname.startsWith("/presto") ||
+    // Public on purpose while the rest is gated: this is the link in the stories.
+    pathname.startsWith("/unisciti") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/_next") ||
     STATIC_FILE.test(pathname)

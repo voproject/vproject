@@ -18,13 +18,22 @@ type Props = {
    * printing it twice on the same screen.
    */
   showClosingLine?: boolean
+  /**
+   * On /unisciti this is the whole page rather than a section appended to one,
+   * so it drops the top rule and the vertical padding the page centers itself.
+   */
+  standalone?: boolean
 }
 
-export function EmailSignup({ showClosingLine = true }: Props) {
+export function EmailSignup({ showClosingLine = true, standalone = false }: Props) {
   return (
     <section
       id="unisciti"
-      className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 border-t border-secondary/20"
+      className={
+        standalone
+          ? "w-full px-4 sm:px-6 lg:px-8"
+          : "scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 border-t border-secondary/20"
+      }
     >
       <div className="max-w-xl mx-auto text-center space-y-6">
         <h2 className="font-display text-2xl sm:text-3xl tracking-wide text-foreground">
