@@ -73,27 +73,46 @@ export function MissionSection() {
             sa che la dipendenza, sotto qualunque forma si presenti, resta sempre una forma di servitù.
           </motion.p>
 
-          {/* Links to manifesto and programma */}
+          {/* What the manifesto and the programma are */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex flex-col sm:flex-row gap-5 sm:gap-10"
+            className="grid sm:grid-cols-2 gap-6 pt-4"
           >
             <a
               href="/manifesto"
-              className="inline-flex items-center gap-2 text-sm font-display tracking-[0.1em] text-secondary border-b border-secondary/40 pb-1 hover:border-secondary transition-colors self-start"
+              className="group border border-secondary/20 hover:border-secondary/50 bg-card/20 hover:bg-card/40 transition-all duration-300 p-7 flex flex-col gap-3"
             >
-              LEGGI IL MANIFESTO COMPLETO
-              <ArrowRight className="w-3.5 h-3.5" />
+              <span className="font-display text-lg tracking-[0.12em] text-foreground group-hover:text-secondary transition-colors">
+                IL MANIFESTO
+              </span>
+              <span className="font-serif text-base text-foreground/70 leading-relaxed">
+                La diagnosi. I numeri del declino italiano, le cause che nessuno nomina e il credo su
+                cui poggia tutto il resto.
+              </span>
+              <span className="inline-flex items-center gap-2 mt-1 text-xs font-display tracking-[0.15em] text-secondary/80">
+                LEGGI
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </span>
             </a>
+
             <a
               href="/programma"
-              className="inline-flex items-center gap-2 text-sm font-display tracking-[0.1em] text-secondary border-b border-secondary/40 pb-1 hover:border-secondary transition-colors self-start"
+              className="group border border-secondary/20 hover:border-secondary/50 bg-card/20 hover:bg-card/40 transition-all duration-300 p-7 flex flex-col gap-3"
             >
-              SCOPRI IL PROGRAMMA
-              <ArrowRight className="w-3.5 h-3.5" />
+              <span className="font-display text-lg tracking-[0.12em] text-foreground group-hover:text-secondary transition-colors">
+                IL PROGRAMMA
+              </span>
+              <span className="font-serif text-base text-foreground/70 leading-relaxed">
+                La strada. Otto capitoli per gli uomini e otto per le donne, su fede, corpo, lavoro e
+                famiglia, nell&apos;ordine giusto.
+              </span>
+              <span className="inline-flex items-center gap-2 mt-1 text-xs font-display tracking-[0.15em] text-secondary/80">
+                SCOPRI
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </span>
             </a>
           </motion.div>
         </motion.div>
