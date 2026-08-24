@@ -32,8 +32,8 @@ export function EmailSignup({ showClosingLine = true }: Props) {
         </h2>
 
         <p className="font-serif text-base text-foreground/80 leading-relaxed">
-          Lascia la tua email e ti arriva subito l&apos;accesso al canale. Il posto dove il discorso
-          continua ogni giorno, senza algoritmo e senza padroni.
+          Lascia la tua email e ricevi subito l&apos;accesso. È lì che il discorso continua ogni
+          giorno, senza algoritmo e senza padroni.
         </p>
 
         <p className="font-display text-sm tracking-[0.15em] text-foreground/70 pt-2">

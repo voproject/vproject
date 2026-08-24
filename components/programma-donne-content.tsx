@@ -80,7 +80,8 @@ export function ProgrammaDonneContent() {
               quella per gli uomini
             </Link>
             , e ti conviene leggerle entrambe, perché a loro viene chiesto almeno quanto viene chiesto
-            a te, riga per riga. Il posto dove il discorso continua ogni giorno è il canale Telegram.
+            a te, riga per riga. Il discorso però non si ferma qui: continua ogni giorno, e qui sotto
+            ti unisci.
           </p>
         </>
       }

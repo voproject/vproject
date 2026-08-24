@@ -66,7 +66,8 @@ export function ProgrammaUominiContent() {
           </p>
           <p className={guideBody}>
             Questa pagina è nata dalle domande vere che arrivano nei messaggi, e continuerà a crescere
-            con le prossime. Il posto dove il discorso continua ogni giorno è il canale Telegram.
+            con le prossime. Il discorso però non si ferma qui: continua ogni giorno, e qui sotto ti
+            unisci.
           </p>
         </>
       }
