@@ -18,7 +18,7 @@ const item = {
 
 export default function PrestoPage() {
   return (
-    <main className="relative min-h-screen w-full overflow-hidden bg-background text-foreground flex items-center justify-center px-4">
+    <main className="relative min-h-[100svh] w-full overflow-hidden bg-background text-foreground flex items-center justify-center px-4">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image

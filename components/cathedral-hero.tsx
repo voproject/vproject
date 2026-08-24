@@ -8,6 +8,11 @@ import { useGSAP } from "@gsap/react"
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
+// On phones the address bar collapses as you scroll, which changes the viewport
+// height and makes ScrollTrigger recalculate mid-scroll: the pinned hero visibly
+// jumps. This tells it to ignore that particular resize.
+ScrollTrigger.config({ ignoreMobileResize: true })
+
 export function CathedralHero() {
   const sectionRef = useRef<HTMLElement>(null)
   const exteriorRef = useRef<HTMLDivElement>(null)
@@ -45,8 +50,11 @@ export function CathedralHero() {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} className="relative h-screen w-full overflow-hidden bg-background">
-      {/* Exterior layer — basilica facade, zooms/fades/blurs away */}
+    <section ref={sectionRef} className="relative h-[100svh] w-full overflow-hidden bg-background">
+      {/* Exterior layer: basilica facade, zooms/fades/blurs away.
+          The basilica sits right of centre in this photo (dome ~64%, facade
+          centre ~57%), so a portrait crop taken at 50% lands on the obelisk side
+          and pushes the dome off-frame. Phones crop around 58% instead. */}
       <div ref={exteriorRef} className="absolute inset-0 z-20">
         <Image
           src="/hero-exterior.jpg"
@@ -54,7 +62,7 @@ export function CathedralHero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-[58%_center] sm:object-center"
         />
         <div className="absolute inset-0 bg-black/45" />
       </div>

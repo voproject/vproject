@@ -25,13 +25,13 @@ export function VolpinVeritasHeader() {
         <nav className="flex items-center gap-5 sm:gap-8">
           <Link
             href="/manifesto"
-            className="font-serif text-sm text-foreground/70 hover:text-secondary transition-colors"
+            className="font-serif text-sm text-foreground/70 hover:text-secondary transition-colors py-3 -my-3"
           >
             Manifesto
           </Link>
           <Link
             href="/programma"
-            className="font-serif text-sm text-foreground/70 hover:text-secondary transition-colors"
+            className="font-serif text-sm text-foreground/70 hover:text-secondary transition-colors py-3 -my-3"
           >
             Programma
           </Link>

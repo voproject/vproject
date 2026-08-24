@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function UniscitiPage() {
   return (
-    <main className="relative min-h-screen w-full overflow-hidden bg-background text-foreground flex items-center justify-center py-20">
+    <main className="relative min-h-[100svh] w-full overflow-hidden bg-background text-foreground flex items-center justify-center py-20">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
