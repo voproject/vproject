@@ -52,9 +52,10 @@ export function CathedralHero() {
   return (
     <section ref={sectionRef} className="relative h-[100svh] w-full overflow-hidden bg-background">
       {/* Exterior layer: basilica facade, zooms/fades/blurs away.
-          The basilica sits right of centre in this photo (dome ~64%, facade
-          centre ~57%), so a portrait crop taken at 50% lands on the obelisk side
-          and pushes the dome off-frame. Phones crop around 58% instead. */}
+          Measured on the source: the dome's brightness centroid sits at 62.7% of
+          the width, the facade's at 52.8% (the shot is off-axis). A portrait crop
+          at 50% therefore lands on the obelisk side and throws the dome out to the
+          edge. 64% here puts the visible centre near 60%, between the two. */}
       <div ref={exteriorRef} className="absolute inset-0 z-20">
         <Image
           src="/hero-exterior.jpg"
@@ -62,7 +63,7 @@ export function CathedralHero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[58%_center] sm:object-center"
+          className="object-cover object-[64%_center] sm:object-center"
         />
         <div className="absolute inset-0 bg-black/45" />
       </div>
