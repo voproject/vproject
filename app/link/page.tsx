@@ -49,19 +49,16 @@ function CornerArch({ className }: { className?: string }) {
 export default function LinkPage() {
   return (
     <main className="relative min-h-[100svh] w-full overflow-hidden bg-background text-foreground flex items-center justify-center py-16 px-5">
-      {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero-exterior.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[64%_center] sm:object-center"
-        />
-        <div className="absolute inset-0 bg-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/95" />
-      </div>
+      {/* Plain dark ground. A photo behind this much dimming only ever showed
+          as a stray bright band across the middle, which read as a mistake, so
+          the depth comes from a single soft glow behind the portrait instead. */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background:
+            "radial-gradient(120% 70% at 50% 18%, oklch(0.12 0.02 50) 0%, oklch(0.06 0.01 50) 62%)",
+        }}
+      />
 
       {/* Corner arches, the site-wide motif */}
       <div className="absolute inset-0 z-10 pointer-events-none">
