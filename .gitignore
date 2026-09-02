@@ -31,3 +31,7 @@ next-env.d.ts
 
 # claude
 .claude/
+
+# HEIC sources: browsers cannot display them, only the converted .jpg ships
+*.HEIC
+*.heic
