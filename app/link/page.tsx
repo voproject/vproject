@@ -76,16 +76,15 @@ export default function LinkPage() {
         {/* Portrait */}
         <div className="flex justify-center">
           <div className="w-28 h-28 rounded-full border border-secondary/50 overflow-hidden bg-card/60 flex items-center justify-center">
-            {/* The source is a 675x900 portrait, so object-cover crops it
-                vertically. The face sits at about 44% of the height: 28% here
-                lands that in the middle of the circle instead of low in it. */}
+            {/* Already cropped square and centred on the face, so it drops
+                straight into the circle with no object-position tuning. */}
             <Image
               src="/profilo.jpg"
               alt="Josef Volpin"
-              width={675}
-              height={900}
+              width={600}
+              height={600}
               priority
-              className="w-full h-full object-cover object-[50%_28%]"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
