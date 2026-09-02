@@ -17,7 +17,6 @@ function XIcon({ className }: { className?: string }) {
 }
 
 const IG = "https://instagram.com/volpinveritas"
-// Handle assumed to match the others; confirm before this goes in the bio.
 const X = "https://x.com/volpinveritas"
 const TELEGRAM = "https://t.me/volpinveritas"
 
