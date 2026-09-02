@@ -33,19 +33,6 @@ const social = [
   { href: TELEGRAM, label: "Telegram", Icon: Send },
 ]
 
-function CornerArch({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 220 220" className={className} fill="none" aria-hidden="true">
-      <path
-        d="M0 220 L0 90 C0 40 40 0 90 0 L220 0"
-        stroke="oklch(0.68 0.09 75)"
-        strokeWidth="1"
-        strokeOpacity="0.4"
-      />
-    </svg>
-  )
-}
-
 export default function LinkPage() {
   return (
     <main className="relative min-h-[100svh] w-full overflow-hidden bg-background text-foreground flex items-center justify-center py-16 px-5">
@@ -60,13 +47,6 @@ export default function LinkPage() {
         }}
       />
 
-      {/* Corner arches, the site-wide motif */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
-        <CornerArch className="absolute top-0 left-0 w-20 h-20 sm:w-28 sm:h-28" />
-        <CornerArch className="absolute top-0 right-0 w-20 h-20 sm:w-28 sm:h-28 -scale-x-100" />
-        <CornerArch className="absolute bottom-0 left-0 w-20 h-20 sm:w-28 sm:h-28 -scale-y-100" />
-        <CornerArch className="absolute bottom-0 right-0 w-20 h-20 sm:w-28 sm:h-28 -scale-x-100 -scale-y-100" />
-      </div>
 
       {/* Content */}
       <div className="relative z-20 w-full max-w-sm mx-auto text-center">
