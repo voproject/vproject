@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import { Instagram, Send } from "lucide-react"
+import { Instagram } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Link | VolpinVeritas",
@@ -18,18 +18,15 @@ function XIcon({ className }: { className?: string }) {
 
 const IG = "https://instagram.com/volpinveritas"
 const X = "https://x.com/volpinveritas"
-const TELEGRAM = "https://t.me/volpinveritas"
 
 const links = [
-  { href: TELEGRAM, label: "TELEGRAM", Icon: Send, external: true, primary: true },
-  { href: IG, label: "INSTAGRAM", Icon: Instagram, external: true },
+  { href: IG, label: "INSTAGRAM", Icon: Instagram, external: true, primary: true },
   { href: X, label: "X", Icon: XIcon, external: true },
 ]
 
 const social = [
   { href: IG, label: "Instagram", Icon: Instagram },
   { href: X, label: "X", Icon: XIcon },
-  { href: TELEGRAM, label: "Telegram", Icon: Send },
 ]
 
 export default function LinkPage() {
