@@ -14,6 +14,7 @@ export type PreghieraId =
   | "salveRegina"
   | "litanie"
   | "sanMichele"
+  | "angeloDiDio"
 
 export type Testo = {
   titolo: string
@@ -148,6 +149,13 @@ export const testi: Record<PreghieraId, Testo> = {
       "Preghiamo. Concedi ai tuoi fedeli, Signore Dio nostro, di godere sempre la salute del corpo e dello spirito, per la gloriosa intercessione di Maria santissima, sempre vergine, salvaci dai mali che ora ci rattristano e guidaci alla gioia senza fine. Per Cristo nostro Signore. Amen.",
     ],
   },
+  angeloDiDio: {
+    titolo: "Angelo di Dio",
+    // Same wording as the closing lines on /preghiere/mattino.
+    paragrafi: [
+      "Angelo di Dio che sei il mio custode illumina, custodisci, reggi e governa a me che ti fui affidato dalla Pietà Celeste. Amen.",
+    ],
+  },
   sanMichele: {
     titolo: "Preghiera a San Michele Arcangelo",
     // Same wording as on /preghiere/mattino, so the site doesn't carry two versions.
@@ -275,6 +283,7 @@ export function costruisciPassi(): Passo[] {
     { grano: "medaglia", preghiera: "litanie", fase: "fine", nota: "Dopo ogni invocazione a Maria si risponde «prega per noi»." },
     { grano: "medaglia", preghiera: "sanGiuseppe", fase: "fine" },
     { grano: "medaglia", preghiera: "sanMichele", fase: "fine" },
+    { grano: "medaglia", preghiera: "angeloDiDio", fase: "fine" },
     { grano: "medaglia", preghiera: "defunti", fase: "fine", nota: "Il rosario si conclude pregando per i defunti." },
     { grano: "croce", preghiera: "segno", fase: "fine", nota: "Infine, il segno della croce." },
   )
