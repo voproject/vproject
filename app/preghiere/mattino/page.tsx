@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function PreghiereMattinoPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <VolpinVeritasHeader />
+      <VolpinVeritasHeader showNav={false} homeHref="/preghiere" />
       <article className="pt-32 pb-24 px-4 sm:px-6 lg:px-8">
         <PreghiereLibro
           titolo="PREGHIERE DEL MATTINO"
