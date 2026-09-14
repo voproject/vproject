@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import { Instagram, Sunrise } from "lucide-react"
+import { Cross, Instagram } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Link | VolpinVeritas",
@@ -20,9 +20,9 @@ const IG = "https://instagram.com/volpinveritas"
 const X = "https://x.com/volpinveritas"
 
 const links = [
-  { href: IG, label: "INSTAGRAM", Icon: Instagram, external: true, primary: true },
+  { href: "/preghiere", label: "PREGHIERE", Icon: Cross, external: false, primary: true },
+  { href: IG, label: "INSTAGRAM", Icon: Instagram, external: true },
   { href: X, label: "X", Icon: XIcon, external: true },
-  { href: "/preghiere/mattino", label: "PREGHIERE DEL MATTINO", Icon: Sunrise, external: false },
 ]
 
 const social = [
