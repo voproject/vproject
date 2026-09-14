@@ -20,7 +20,7 @@ const IG = "https://instagram.com/volpinveritas"
 const X = "https://x.com/volpinveritas"
 
 const links = [
-  { href: "/preghiere", label: "PREGHIERE", Icon: Cross, external: false, primary: true },
+  { href: "/preghiere", label: "PREGHIERE GIORNALIERE", Icon: Cross, external: false, primary: true },
   { href: IG, label: "INSTAGRAM", Icon: Instagram, external: true },
   { href: X, label: "X", Icon: XIcon, external: true },
 ]
