@@ -4,7 +4,6 @@ import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { VolpinVeritasHeader } from "@/components/volpinveritas-header"
 import { VolpinFooter } from "@/components/volpin-footer"
-import { EmailSignup } from "@/components/email-signup"
 
 export const metadata: Metadata = {
   title: "Le preghiere | VolpinVeritas",
@@ -64,8 +63,6 @@ export default function PreghierePage() {
           </div>
         </div>
       </div>
-
-      <EmailSignup />
 
       <VolpinFooter />
     </main>

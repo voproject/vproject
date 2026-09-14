@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { VolpinVeritasHeader } from "@/components/volpinveritas-header"
 import { VolpinFooter } from "@/components/volpin-footer"
-import { EmailSignup } from "@/components/email-signup"
 import { PreghiereLibro } from "@/components/preghiere-libro"
 import { mattino } from "@/lib/preghiere"
 
@@ -22,7 +21,6 @@ export default function PreghiereMattinoPage() {
           altra={{ href: "/preghiere/sera", label: "PREGHIERE DELLA SERA" }}
         />
       </article>
-      <EmailSignup />
       <VolpinFooter />
     </main>
   )
