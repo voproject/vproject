@@ -13,6 +13,13 @@ export const metadata: Metadata = {
 const percorsi = [
   { href: "/preghiere/mattino", sopra: "PREGHIERE DEL", nome: "MATTINO", sotto: "Al risveglio" },
   { href: "/preghiere/sera", sopra: "PREGHIERE DELLA", nome: "SERA", sotto: "Prima di dormire" },
+  {
+    href: "/preghiere/rosario",
+    sopra: "IL SANTO",
+    nome: "ROSARIO",
+    sotto: "Grano per grano, con i misteri del giorno",
+    largo: true,
+  },
 ]
 
 export default function PreghierePage() {
@@ -46,7 +53,7 @@ export default function PreghierePage() {
               <Link
                 key={p.href}
                 href={p.href}
-                className="group border border-secondary/30 hover:border-secondary/70 bg-card/40 hover:bg-card/70 transition-all duration-300 py-12 px-6 flex flex-col items-center justify-center gap-3"
+                className={`${p.largo ? "sm:col-span-2 " : ""}group border border-secondary/30 hover:border-secondary/70 bg-card/40 hover:bg-card/70 transition-all duration-300 py-12 px-6 flex flex-col items-center justify-center gap-3`}
               >
                 <span className="font-display text-[0.65rem] tracking-[0.2em] text-secondary/70">
                   {p.sopra}
