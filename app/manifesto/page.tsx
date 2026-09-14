@@ -26,7 +26,7 @@ export default function ManifestoPage() {
           </header>
 
           <p className={p}>
-            Imprenditore. Cattolico. Militante.
+            Imprenditore Cattolico Militante
           </p>
           <p className={p}>
             Mi hanno detto che devo sceglierne una, perché queste tre parole non possono stare

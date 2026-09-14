@@ -5,7 +5,7 @@ import { EmailSignup } from "@/components/email-signup"
 
 export const metadata: Metadata = {
   title: "Unisciti | VolpinVeritas",
-  description: "Imprenditore. Cattolico. Militante. Lascia la tua email e ricevi l'accesso.",
+  description: "Imprenditore Cattolico Militante. Lascia la tua email e ricevi l'accesso.",
 }
 
 export default function UniscitiPage() {

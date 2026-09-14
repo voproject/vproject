@@ -4,7 +4,7 @@ import { Cross, Instagram } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Link | VolpinVeritas",
-  description: "Imprenditore. Cattolico. Militante. Tutti i link in un posto solo.",
+  description: "Imprenditore Cattolico Militante. Tutti i link in un posto solo.",
 }
 
 // lucide's "X" is the close cross, not the platform mark, so this is hand-drawn.
@@ -67,7 +67,7 @@ export default function LinkPage() {
           VOLPINVERITAS
         </h1>
         <p className="mt-2 font-serif italic text-base text-secondary">
-          Imprenditore. Cattolico. Militante.
+          Imprenditore Cattolico Militante
         </p>
 
         {/* Social row */}

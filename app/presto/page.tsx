@@ -79,7 +79,7 @@ export default function PrestoPage() {
         </motion.h1>
 
         <motion.p variants={item} className="font-serif italic text-lg text-secondary">
-          Imprenditore. Cattolico. Militante.
+          Imprenditore Cattolico Militante
         </motion.p>
 
         <motion.p variants={item} className="font-serif text-base text-foreground/80 leading-relaxed">

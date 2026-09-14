@@ -95,7 +95,7 @@ export function CathedralHero() {
           className="mt-5 font-serif italic text-lg sm:text-xl text-foreground"
           style={{ textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,0.95)" }}
         >
-          Imprenditore. Cattolico. Militante.
+          Imprenditore Cattolico Militante
         </p>
         <p
           className="mt-2 font-serif text-base text-foreground"

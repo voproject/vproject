@@ -29,7 +29,7 @@ const _ebGaramond = EB_Garamond({
 
 export const metadata: Metadata = {
   title: "VolpinVeritas",
-  description: "Imprenditore. Cattolico. Militante.",
+  description: "Imprenditore Cattolico Militante",
   generator: "v0.app",
   icons: {
     icon: "/icon-32x32.png",
