@@ -20,6 +20,8 @@ export function proxy(request: NextRequest) {
     // and in the stories, so they have to work before the site opens.
     pathname.startsWith("/unisciti") ||
     pathname.startsWith("/link") ||
+    // /preghiere, /preghiere/mattino and /preghiere/sera, linked from the bio.
+    pathname.startsWith("/preghiere") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/_next") ||
     STATIC_FILE.test(pathname)

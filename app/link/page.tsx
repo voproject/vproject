@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import { Instagram } from "lucide-react"
+import { Instagram, Sunrise } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Link | VolpinVeritas",
@@ -22,6 +22,7 @@ const X = "https://x.com/volpinveritas"
 const links = [
   { href: IG, label: "INSTAGRAM", Icon: Instagram, external: true, primary: true },
   { href: X, label: "X", Icon: XIcon, external: true },
+  { href: "/preghiere/mattino", label: "PREGHIERE DEL MATTINO", Icon: Sunrise, external: false },
 ]
 
 const social = [
@@ -85,14 +86,13 @@ export default function LinkPage() {
           ))}
         </div>
 
-        {/* Links */}
+        {/* Links. Our own pages open in the same tab; only the socials open a new one. */}
         <nav className="mt-9 flex flex-col gap-3.5">
-          {links.map(({ href, label, Icon, primary }) => (
+          {links.map(({ href, label, Icon, primary, external }) => (
             <a
               key={label}
               href={href}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className={[
                 "group relative flex items-center justify-center min-h-[58px] px-14 border transition-all duration-300 font-display text-sm tracking-[0.1em]",
                 primary
