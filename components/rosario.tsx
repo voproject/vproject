@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { ChevronLeft, ChevronRight, RotateCcw } from "lucide-react"
+import { Blocchi } from "@/components/preghiere-libro"
+import { mattino, sera } from "@/lib/preghiere"
 import {
   costruisciPassi,
   ordinali,
@@ -10,11 +12,25 @@ import {
   seriePerGiorno,
   testi,
   type Passo,
+  type PreghieraCondivisa,
   type PreghieraId,
   type Serie,
 } from "@/lib/rosario"
 
 const CHIAVE = "vv_rosario"
+
+const condivise: Record<PreghieraCondivisa, { titolo: string; blocchi: (typeof mattino)[number]["blocchi"] }> = {
+  // On the morning page this is titled as a consecration of the day, which
+  // doesn't fit at the end of a rosary; the text is the same.
+  sanGiuseppe: {
+    titolo: "Preghiera a San Giuseppe",
+    blocchi: mattino.find((p) => p.slug === "san-giuseppe")!.blocchi,
+  },
+  defunti: {
+    titolo: "Per i defunti",
+    blocchi: sera.find((p) => p.slug === "per-i-defunti")!.blocchi,
+  },
+}
 
 type Grano = { id: string; x: number; y: number; tipo: "piccolo" | "grande" | "medaglia" }
 
@@ -367,12 +383,18 @@ export function Rosario() {
             ) : (
               <div className="space-y-5">
                 <h2 className="font-display text-xl sm:text-2xl tracking-wide text-foreground">
-                  {testi[passo.preghiera as PreghieraId].titolo}
+                  {passo.preghiera in condivise
+                    ? condivise[passo.preghiera as PreghieraCondivisa].titolo
+                    : testi[passo.preghiera as PreghieraId].titolo}
                 </h2>
                 {passo.nota && (
                   <p className="font-serif italic text-base text-foreground/60">{passo.nota}</p>
                 )}
-                <TestoPreghiera id={passo.preghiera as PreghieraId} />
+                {passo.preghiera in condivise ? (
+                  <Blocchi blocchi={condivise[passo.preghiera as PreghieraCondivisa].blocchi} />
+                ) : (
+                  <TestoPreghiera id={passo.preghiera as PreghieraId} />
+                )}
               </div>
             )}
           </div>

@@ -227,10 +227,14 @@ export const seriePerGiorno: Serie[] = [
 
 export const ordinali = ["Primo", "Secondo", "Terzo", "Quarto", "Quinto"]
 
+// Prayers whose text already lives on /preghiere/mattino and /preghiere/sera:
+// the rosary reuses those blocks so the site never carries two versions.
+export type PreghieraCondivisa = "sanGiuseppe" | "defunti"
+
 export type Passo = {
   // Id of the bead lit while this prayer is said.
   grano: string
-  preghiera: PreghieraId | "mistero"
+  preghiera: PreghieraId | PreghieraCondivisa | "mistero"
   fase: "inizio" | "decina" | "fine"
   decina?: number
   ave?: number
@@ -269,8 +273,10 @@ export function costruisciPassi(): Passo[] {
     { grano: "medaglia", preghiera: "fatima", fase: "decina", decina: 5 },
     { grano: "medaglia", preghiera: "salveRegina", fase: "fine", nota: "Terminate le cinque decine." },
     { grano: "medaglia", preghiera: "litanie", fase: "fine", nota: "Dopo ogni invocazione a Maria si risponde «prega per noi»." },
+    { grano: "medaglia", preghiera: "sanGiuseppe", fase: "fine" },
     { grano: "medaglia", preghiera: "sanMichele", fase: "fine" },
-    { grano: "croce", preghiera: "segno", fase: "fine", nota: "Il rosario si chiude come si è aperto." },
+    { grano: "medaglia", preghiera: "defunti", fase: "fine", nota: "Il rosario si conclude pregando per i defunti." },
+    { grano: "croce", preghiera: "segno", fase: "fine", nota: "Infine, il segno della croce." },
   )
 
   return passi

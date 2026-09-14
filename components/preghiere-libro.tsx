@@ -5,7 +5,7 @@ import type { Blocco, Preghiera } from "@/lib/preghiere"
 const corpo = "font-serif text-lg text-foreground/90 leading-relaxed"
 const rubrica = "font-serif italic text-base text-secondary/85 text-center"
 
-function Blocchi({ blocchi }: { blocchi: Blocco[] }) {
+export function Blocchi({ blocchi }: { blocchi: Blocco[] }) {
   return (
     <div className="space-y-6">
       {blocchi.map((b, i) => {
