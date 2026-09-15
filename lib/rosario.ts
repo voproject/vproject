@@ -1,5 +1,6 @@
 // Testi e struttura del Santo Rosario, verificati sulle fonti:
-// Padre Nostro del Messale Romano 2020, Credo e Gloria al Padre CEI,
+// Padre Nostro del Messale Romano 2020 ma con "non indurci in tentazione",
+// Credo e Gloria al Padre CEI,
 // "Gesù mio" dal libretto vaticano del rosario (2025), Litanie CEI 2021,
 // titoli dei misteri da vatican.va, versetti CEI 2008 (bibbiaedu.it) ridotti
 // a frasi intere.
@@ -40,7 +41,7 @@ export const testi: Record<PreghieraId, Testo> = {
     titolo: "Padre Nostro",
     paragrafi: [
       "Padre nostro, che sei nei cieli, sia santificato il tuo nome, venga il tuo regno, sia fatta la tua volontà, come in cielo così in terra.",
-      "Dacci oggi il nostro pane quotidiano, e rimetti a noi i nostri debiti come anche noi li rimettiamo ai nostri debitori, e non abbandonarci alla tentazione, ma liberaci dal male. Amen.",
+      "Dacci oggi il nostro pane quotidiano, e rimetti a noi i nostri debiti come anche noi li rimettiamo ai nostri debitori, e non indurci in tentazione, ma liberaci dal male. Amen.",
     ],
   },
   aveMaria: {
