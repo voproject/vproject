@@ -212,6 +212,31 @@ export const sera: Preghiera[] = [
     ],
   },
   {
+    slug: "esame-di-coscienza",
+    titolo: "Esame di coscienza",
+    blocchi: [
+      { tipo: "rubrica", testo: "Da farsi al termine della giornata e per la confessione frequente." },
+      { tipo: "sottotitolo", testo: "VERSO DIO" },
+      {
+        tipo: "prosa",
+        testo:
+          "Amore di Dio sopra ogni cosa. Negligenze o omissioni nei doveri religiosi. Irriverenze in Chiesa. Santificazione della festa. Mancanza di rispetto verso persone o cose sacre. Dubbi sulla fede. Rispetto umano. Bestemmie. Imprecazioni. Mancanza di fiducia e di rassegnazione. Resistenza alla grazia.",
+      },
+      { tipo: "sottotitolo", testo: "VERSO IL PROSSIMO" },
+      {
+        tipo: "prosa",
+        testo:
+          "Amore al prossimo per amor di Dio. Mancanza di sollecitudine, di obbedienza. Ostinazione. Durezza. Disprezzo. Freddezza. Odio. Gelosia. Ingiurie. Perdono delle ingiurie. Scherni. Calunnie. Maldicenze. False testimonianze. Violenze. Menzogne. Cattivi esempi. Incitamento al male. Scandalo. Ingiustizie. Danni alla reputazione o ai beni. Debiti. Furto. Doveri verso la Patria, verso la Società.",
+      },
+      { tipo: "sottotitolo", testo: "VERSO SÉ STESSI" },
+      {
+        tipo: "prosa",
+        testo:
+          "Vittoria sul nostro difetto principale. Superficialità. Generosità. Orgoglio. Vanità. Avarizia. Desideri, sguardi, letture, parole e azioni impure. Intemperanza. Gola. Mollezza. Immortificazione. Collera. Impazienza. Pigrizia nell'adempimento dei doveri del proprio stato.",
+      },
+    ],
+  },
+  {
     slug: "atto-di-dolore",
     titolo: "Atto di dolore",
     blocchi: [
