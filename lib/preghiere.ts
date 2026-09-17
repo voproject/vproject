@@ -8,6 +8,10 @@ export type Blocco =
   | { tipo: "rubrica"; testo: string }
   | { tipo: "sottotitolo"; testo: string }
   | { tipo: "invocazioni"; righe: { testo: string; risposta: string }[] }
+  // Non è una preghiera da recitare ma un elenco da scorrere, quindi ha un
+  // blocco suo: incorniciato e diviso in gruppi, per non confonderlo con le
+  // preghiere che stanno sopra e sotto.
+  | { tipo: "esame"; nota: string; gruppi: { titolo: string; voci: string[] }[] }
 
 export type Preghiera = {
   slug: string
@@ -216,23 +220,75 @@ export const sera: Preghiera[] = [
     titolo: "Esame di coscienza",
     blocchi: [
       { tipo: "rubrica", testo: "Da farsi al termine della giornata e per la confessione frequente." },
-      { tipo: "sottotitolo", testo: "VERSO DIO" },
       {
-        tipo: "prosa",
-        testo:
-          "Amore di Dio sopra ogni cosa. Negligenze o omissioni nei doveri religiosi. Irriverenze in Chiesa. Santificazione della festa. Mancanza di rispetto verso persone o cose sacre. Dubbi sulla fede. Rispetto umano. Bestemmie. Imprecazioni. Mancanza di fiducia e di rassegnazione. Resistenza alla grazia.",
-      },
-      { tipo: "sottotitolo", testo: "VERSO IL PROSSIMO" },
-      {
-        tipo: "prosa",
-        testo:
-          "Amore al prossimo per amor di Dio. Mancanza di sollecitudine, di obbedienza. Ostinazione. Durezza. Disprezzo. Freddezza. Odio. Gelosia. Ingiurie. Perdono delle ingiurie. Scherni. Calunnie. Maldicenze. False testimonianze. Violenze. Menzogne. Cattivi esempi. Incitamento al male. Scandalo. Ingiustizie. Danni alla reputazione o ai beni. Debiti. Furto. Doveri verso la Patria, verso la Società.",
-      },
-      { tipo: "sottotitolo", testo: "VERSO SÉ STESSI" },
-      {
-        tipo: "prosa",
-        testo:
-          "Vittoria sul nostro difetto principale. Superficialità. Generosità. Orgoglio. Vanità. Avarizia. Desideri, sguardi, letture, parole e azioni impure. Intemperanza. Gola. Mollezza. Immortificazione. Collera. Impazienza. Pigrizia nell'adempimento dei doveri del proprio stato.",
+        tipo: "esame",
+        nota: "Non è una preghiera da recitare. È un elenco su cui fermarsi, una voce alla volta.",
+        gruppi: [
+          {
+            titolo: "VERSO DIO",
+            voci: [
+              "Amore di Dio sopra ogni cosa",
+              "Negligenze o omissioni nei doveri religiosi",
+              "Irriverenze in Chiesa",
+              "Santificazione della festa",
+              "Mancanza di rispetto verso persone o cose sacre",
+              "Dubbi sulla fede",
+              "Rispetto umano",
+              "Bestemmie",
+              "Imprecazioni",
+              "Mancanza di fiducia e di rassegnazione",
+              "Resistenza alla grazia",
+            ],
+          },
+          {
+            titolo: "VERSO IL PROSSIMO",
+            voci: [
+              "Amore al prossimo per amor di Dio",
+              "Mancanza di sollecitudine, di obbedienza",
+              "Ostinazione",
+              "Durezza",
+              "Disprezzo",
+              "Freddezza",
+              "Odio",
+              "Gelosia",
+              "Ingiurie",
+              "Perdono delle ingiurie",
+              "Scherni",
+              "Calunnie",
+              "Maldicenze",
+              "False testimonianze",
+              "Violenze",
+              "Menzogne",
+              "Cattivi esempi",
+              "Incitamento al male",
+              "Scandalo",
+              "Ingiustizie",
+              "Danni alla reputazione o ai beni",
+              "Debiti",
+              "Furto",
+              "Doveri verso la Patria, verso la Società",
+            ],
+          },
+          {
+            titolo: "VERSO SÉ STESSI",
+            voci: [
+              "Vittoria sul nostro difetto principale",
+              "Superficialità",
+              "Generosità",
+              "Orgoglio",
+              "Vanità",
+              "Avarizia",
+              "Desideri, sguardi, letture, parole e azioni impure",
+              "Intemperanza",
+              "Gola",
+              "Mollezza",
+              "Immortificazione",
+              "Collera",
+              "Impazienza",
+              "Pigrizia nell'adempimento dei doveri del proprio stato",
+            ],
+          },
+        ],
       },
     ],
   },

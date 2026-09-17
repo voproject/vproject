@@ -45,6 +45,34 @@ export function Blocchi({ blocchi }: { blocchi: Blocco[] }) {
                 {b.testo}
               </h3>
             )
+          case "esame":
+            return (
+              <div key={i} className="border border-secondary/30 bg-card/30 p-5 sm:p-8 space-y-9">
+                <p className="font-serif italic text-base text-secondary/85 text-center">
+                  {b.nota}
+                </p>
+                {b.gruppi.map((g) => (
+                  <div key={g.titolo}>
+                    <h3 className="font-display text-xs tracking-[0.2em] text-secondary border-b border-secondary/25 pb-3">
+                      {g.titolo}
+                    </h3>
+                    <ul className="mt-5 grid sm:grid-cols-2 gap-x-10 gap-y-3">
+                      {g.voci.map((voce) => (
+                        <li
+                          key={voce}
+                          className="flex gap-3 font-serif text-base text-foreground/85 leading-snug"
+                        >
+                          <span aria-hidden="true" className="text-secondary/50 text-[0.55rem] pt-[0.45rem]">
+                            ✦
+                          </span>
+                          {voce}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )
           case "invocazioni":
             return (
               <div key={i} className="space-y-4 text-center">
