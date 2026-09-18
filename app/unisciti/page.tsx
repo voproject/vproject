@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { EmailSignup } from "@/components/email-signup"
+import { UniscitiBroadcast } from "@/components/unisciti-broadcast"
 
 export const metadata: Metadata = {
   title: "Unisciti | VolpinVeritas",
-  description: "Imprenditore Cattolico Militante. Lascia la tua email e ricevi l'accesso.",
+  description: "Imprenditore Cattolico Militante. Entra nel canale broadcast e ricevi quello che scrivo ogni giorno.",
 }
 
 export default function UniscitiPage() {
@@ -55,7 +55,7 @@ export default function UniscitiPage() {
           </Link>
         </div>
 
-        <EmailSignup standalone />
+        <UniscitiBroadcast standalone />
       </div>
     </main>
   )

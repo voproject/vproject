@@ -1,7 +1,7 @@
 import { VolpinVeritasHeader } from "@/components/volpinveritas-header"
 import { CathedralHero } from "@/components/cathedral-hero"
 import { MissionSection } from "@/components/mission-section"
-import { EmailSignup } from "@/components/email-signup"
+import { UniscitiBroadcast } from "@/components/unisciti-broadcast"
 import { VolpinFooter } from "@/components/volpin-footer"
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <VolpinVeritasHeader />
       <CathedralHero />
       <MissionSection />
-      <EmailSignup />
+      <UniscitiBroadcast />
       <VolpinFooter />
     </main>
   )

@@ -4,7 +4,7 @@ import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { VolpinVeritasHeader } from "@/components/volpinveritas-header"
 import { VolpinFooter } from "@/components/volpin-footer"
-import { EmailSignup } from "@/components/email-signup"
+import { UniscitiBroadcast } from "@/components/unisciti-broadcast"
 
 export const metadata: Metadata = {
   title: "Il programma | VolpinVeritas",
@@ -79,7 +79,7 @@ export default function ProgrammaPage() {
         </div>
       </div>
 
-      <EmailSignup />
+      <UniscitiBroadcast />
 
       <VolpinFooter />
     </main>

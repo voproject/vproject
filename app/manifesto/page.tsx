@@ -1,6 +1,6 @@
 import { VolpinVeritasHeader } from "@/components/volpinveritas-header"
 import { VolpinFooter } from "@/components/volpin-footer"
-import { EmailSignup } from "@/components/email-signup"
+import { UniscitiBroadcast } from "@/components/unisciti-broadcast"
 import { SectionDivider } from "@/components/section-divider"
 import { ManifestoSectionHeader } from "@/components/manifesto-section-header"
 import { ManifestoCredo } from "@/components/manifesto-credo"
@@ -287,7 +287,7 @@ export default function ManifestoPage() {
         </div>
       </article>
 
-      <EmailSignup showClosingLine={false} />
+      <UniscitiBroadcast showClosingLine={false} />
 
       <VolpinFooter />
     </main>
