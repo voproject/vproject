@@ -261,14 +261,17 @@ export function costruisciPassi(): Passo[] {
     { grano: "a1", preghiera: "aveMaria", fase: "inizio", ave: 1, nota: "Sui tre grani piccoli si recitano tre Ave Maria. Questa è per la fede." },
     { grano: "a2", preghiera: "aveMaria", fase: "inizio", ave: 2, nota: "Per la speranza." },
     { grano: "a3", preghiera: "aveMaria", fase: "inizio", ave: 3, nota: "Per la carità." },
-    { grano: "p2", preghiera: "gloria", fase: "inizio", nota: "Prima di cominciare la prima decina." },
+    { grano: "a3", preghiera: "gloria", fase: "inizio", nota: "Sullo stesso grano dell'ultima Ave Maria, prima di passare al grano grande." },
   ]
 
   for (let n = 1; n <= 5; n++) {
     const grande = n === 1 ? "p2" : `p-d${n - 1}`
     if (n > 1) {
-      passi.push({ grano: grande, preghiera: "gloria", fase: "decina", decina: n - 1, nota: "La decina si chiude con il Gloria." })
-      passi.push({ grano: grande, preghiera: "fatima", fase: "decina", decina: n - 1 })
+      // Sul decimo grano piccolo della decina appena finita: il grano grande
+      // che segue serve al mistero e al Padre Nostro.
+      const ultimo = `d${n - 1}-10`
+      passi.push({ grano: ultimo, preghiera: "gloria", fase: "decina", decina: n - 1, nota: "Sullo stesso grano dell'ultima Ave Maria." })
+      passi.push({ grano: ultimo, preghiera: "fatima", fase: "decina", decina: n - 1 })
     }
     passi.push({ grano: grande, preghiera: "mistero", fase: "decina", decina: n })
     passi.push({ grano: grande, preghiera: "padreNostro", fase: "decina", decina: n, nota: "Sul grano grande, dopo aver annunciato il mistero." })
@@ -278,8 +281,8 @@ export function costruisciPassi(): Passo[] {
   }
 
   passi.push(
-    { grano: "medaglia", preghiera: "gloria", fase: "decina", decina: 5, nota: "L'ultima decina si chiude con il Gloria." },
-    { grano: "medaglia", preghiera: "fatima", fase: "decina", decina: 5 },
+    { grano: "d5-10", preghiera: "gloria", fase: "decina", decina: 5, nota: "Sullo stesso grano dell'ultima Ave Maria." },
+    { grano: "d5-10", preghiera: "fatima", fase: "decina", decina: 5 },
     { grano: "medaglia", preghiera: "salveRegina", fase: "fine", nota: "Terminate le cinque decine." },
     { grano: "medaglia", preghiera: "litanie", fase: "fine", nota: "Dopo ogni invocazione a Maria si risponde «prega per noi»." },
     { grano: "medaglia", preghiera: "sanGiuseppe", fase: "fine" },
