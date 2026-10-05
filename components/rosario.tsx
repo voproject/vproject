@@ -1,8 +1,10 @@
 "use client"
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
+import Image from "next/image"
 import { ChevronLeft, ChevronRight, RotateCcw } from "lucide-react"
 import { Blocchi } from "@/components/preghiere-libro"
+import { immagini } from "@/lib/rosario-immagini"
 import { mattino, sera } from "@/lib/preghiere"
 import {
   costruisciPassi,
@@ -206,6 +208,7 @@ export function Rosario() {
   const passo = passi[i]
   const s = serie[scelta]
   const mistero = passo.decina ? s.misteri[passo.decina - 1] : null
+  const dipinto = passo.decina ? immagini[scelta][passo.decina - 1] : null
   const ultimo = i === passi.length - 1
   const fatti = useMemo(() => new Set(passi.slice(0, i).map((p) => p.grano)), [passi, i])
 
@@ -369,6 +372,33 @@ export function Rosario() {
                     {mistero.titolo}
                   </h2>
                 </div>
+                {dipinto && (
+                  <figure className="space-y-2">
+                    {/* object-contain e non cover: un ritaglio su un dipinto
+                        taglierebbe proprio la scena da guardare. */}
+                    <div className="border border-secondary/25 bg-black/40 p-2">
+                      <Image
+                        src={dipinto.src}
+                        alt={dipinto.didascalia}
+                        width={dipinto.larghezza}
+                        height={dipinto.altezza}
+                        sizes="(min-width: 1024px) 640px, 100vw"
+                        className="w-full h-auto max-h-[300px] sm:max-h-[380px] object-contain"
+                      />
+                    </div>
+                    <figcaption className="font-serif text-xs text-foreground/45 leading-snug">
+                      <a
+                        href={dipinto.fonte}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-secondary transition-colors"
+                      >
+                        {dipinto.didascalia}
+                      </a>
+                    </figcaption>
+                  </figure>
+                )}
+
                 <blockquote className="border-l-2 border-primary pl-5 space-y-2">
                   <p className={`${corpo} italic`}>{mistero.versetto}</p>
                   <cite className="block not-italic font-display text-xs tracking-[0.15em] text-secondary/80">
