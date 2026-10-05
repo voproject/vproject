@@ -20,10 +20,14 @@ export type PreghieraId =
 export type Testo = {
   titolo: string
   paragrafi?: string[]
+  // Strofe di versi, per i salmi.
+  versi?: string[][]
   // Invocation and response, for litanies and versicles.
   righe?: { v: string; r?: string }[]
   chiusa?: string[]
 }
+
+export type Lingua = "it" | "la"
 
 export const testi: Record<PreghieraId, Testo> = {
   segno: {
@@ -284,7 +288,7 @@ export function costruisciPassi(): Passo[] {
     { grano: "d5-10", preghiera: "gloria", fase: "decina", decina: 5, nota: "Sullo stesso grano dell'ultima Ave Maria." },
     { grano: "d5-10", preghiera: "fatima", fase: "decina", decina: 5 },
     { grano: "medaglia", preghiera: "salveRegina", fase: "fine", nota: "Terminate le cinque decine." },
-    { grano: "medaglia", preghiera: "litanie", fase: "fine", nota: "Dopo ogni invocazione a Maria si risponde «prega per noi»." },
+    { grano: "medaglia", preghiera: "litanie", fase: "fine", nota: "Dopo ogni invocazione si ripete la risposta scritta in corsivo." },
     { grano: "medaglia", preghiera: "sanGiuseppe", fase: "fine" },
     { grano: "medaglia", preghiera: "sanMichele", fase: "fine" },
     { grano: "medaglia", preghiera: "angeloDiDio", fase: "fine" },

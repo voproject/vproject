@@ -5,6 +5,7 @@ import Image from "next/image"
 import { ChevronLeft, ChevronRight, RotateCcw } from "lucide-react"
 import { Blocchi } from "@/components/preghiere-libro"
 import { immagini } from "@/lib/rosario-immagini"
+import { testiLa } from "@/lib/rosario-latino"
 import { mattino, sera } from "@/lib/preghiere"
 import {
   costruisciPassi,
@@ -13,6 +14,8 @@ import {
   serie,
   seriePerGiorno,
   testi,
+  type Lingua,
+  type Testo,
   type Passo,
   type PreghieraCondivisa,
   type PreghieraId,
@@ -93,8 +96,15 @@ function etichetta(p: Passo) {
 
 const corpo = "font-serif text-lg text-foreground/90 leading-relaxed"
 
-function TestoPreghiera({ id }: { id: PreghieraId }) {
-  const t = testi[id]
+// In italiano San Giuseppe e i defunti riusano i blocchi di /preghiere, in
+// latino hanno un testo loro. Se un testo latino manca si mostra l'italiano.
+function testoDi(id: PreghieraId | PreghieraCondivisa, lingua: Lingua): Testo | null {
+  if (lingua === "la" && testiLa[id]) return testiLa[id]!
+  if (id in condivise) return null
+  return testi[id as PreghieraId]
+}
+
+function TestoPreghiera({ t, id }: { t: Testo; id: string }) {
   const litania = id === "litanie"
   return (
     <div className="space-y-5">
@@ -103,6 +113,19 @@ function TestoPreghiera({ id }: { id: PreghieraId }) {
           {p}
         </p>
       ))}
+      {t.versi && (
+        <div className="space-y-5 text-center">
+          {t.versi.map((strofa, i) => (
+            <p key={i} className={corpo}>
+              {strofa.map((verso, k) => (
+                <span key={k} className="block">
+                  {verso}
+                </span>
+              ))}
+            </p>
+          ))}
+        </div>
+      )}
       {t.righe && (
         <div className={litania ? "space-y-1.5" : "space-y-2"}>
           {t.righe.map((riga, i) => (
@@ -138,6 +161,7 @@ export function Rosario() {
 
   const [i, setI] = useState(0)
   const [scelta, setScelta] = useState<Serie>("gaudiosi")
+  const [lingua, setLingua] = useState<Lingua>("it")
   const [diOggi, setDiOggi] = useState<Serie | null>(null)
   const [pronto, setPronto] = useState(false)
   const pannello = useRef<HTMLDivElement>(null)
@@ -158,6 +182,7 @@ export function Rosario() {
         Number.isInteger(salvato.passo) &&
         salvato.passo >= 0 &&
         salvato.passo < passi.length
+      if (salvato && (salvato.lingua === "it" || salvato.lingua === "la")) setLingua(salvato.lingua)
       if (valido) {
         setScelta(salvato.serie)
         setI(salvato.passo)
@@ -174,9 +199,9 @@ export function Rosario() {
     if (!pronto) return
     localStorage.setItem(
       CHIAVE,
-      JSON.stringify({ giorno: oggiChiave(new Date()), serie: scelta, passo: i }),
+      JSON.stringify({ giorno: oggiChiave(new Date()), serie: scelta, passo: i, lingua }),
     )
-  }, [pronto, scelta, i])
+  }, [pronto, scelta, i, lingua])
 
   const vai = useCallback(
     (n: number) => setI(Math.max(0, Math.min(passi.length - 1, n))),
@@ -210,6 +235,10 @@ export function Rosario() {
   const mistero = passo.decina ? s.misteri[passo.decina - 1] : null
   const dipinto = passo.decina ? immagini[scelta][passo.decina - 1] : null
   const ultimo = i === passi.length - 1
+  const testo =
+    passo.preghiera === "mistero"
+      ? null
+      : testoDi(passo.preghiera as PreghieraId | PreghieraCondivisa, lingua)
   const fatti = useMemo(() => new Set(passi.slice(0, i).map((p) => p.grano)), [passi, i])
 
   const statoDi = (id: string) =>
@@ -268,6 +297,33 @@ export function Rosario() {
             </button>
           )
         })}
+      </div>
+
+      {/* Lingua delle preghiere. Le istruzioni e i misteri restano in italiano:
+          servono a capire cosa fare, non si recitano. */}
+      <div className="mt-6 flex justify-center">
+        <div className="inline-flex border border-secondary/25" role="group" aria-label="Lingua delle preghiere">
+          {([["it", "ITALIANO"], ["la", "LATINO"]] as const).map(([k, etichetta], idx) => {
+            const attiva = lingua === k
+            return (
+              <button
+                key={k}
+                type="button"
+                aria-pressed={attiva}
+                onClick={() => setLingua(k)}
+                className={[
+                  "min-h-[40px] px-5 font-display text-xs tracking-[0.15em] transition-colors",
+                  idx === 1 ? "border-l border-secondary/25" : "",
+                  attiva
+                    ? "bg-card/80 text-secondary"
+                    : "text-foreground/55 hover:text-foreground/85",
+                ].join(" ")}
+              >
+                {etichetta}
+              </button>
+            )
+          })}
+        </div>
       </div>
 
       <div className="mt-8 sm:mt-10 grid lg:grid-cols-[320px_minmax(0,1fr)] gap-8 lg:gap-14 items-start">
@@ -413,17 +469,17 @@ export function Rosario() {
             ) : (
               <div className="space-y-5">
                 <h2 className="font-display text-xl sm:text-2xl tracking-wide text-foreground">
-                  {passo.preghiera in condivise
-                    ? condivise[passo.preghiera as PreghieraCondivisa].titolo
-                    : testi[passo.preghiera as PreghieraId].titolo}
+                  {testo
+                    ? testo.titolo
+                    : condivise[passo.preghiera as PreghieraCondivisa].titolo}
                 </h2>
                 {passo.nota && (
                   <p className="font-serif italic text-base text-foreground/60">{passo.nota}</p>
                 )}
-                {passo.preghiera in condivise ? (
-                  <Blocchi blocchi={condivise[passo.preghiera as PreghieraCondivisa].blocchi} />
+                {testo ? (
+                  <TestoPreghiera t={testo} id={passo.preghiera} />
                 ) : (
-                  <TestoPreghiera id={passo.preghiera as PreghieraId} />
+                  <Blocchi blocchi={condivise[passo.preghiera as PreghieraCondivisa].blocchi} />
                 )}
               </div>
             )}
