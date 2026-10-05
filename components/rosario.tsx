@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight, RotateCcw } from "lucide-react"
 import { Blocchi } from "@/components/preghiere-libro"
 import { immagini } from "@/lib/rosario-immagini"
 import { testiLa } from "@/lib/rosario-latino"
+import { credoNiceno } from "@/lib/rosario-credo"
 import { mattino, sera } from "@/lib/preghiere"
 import {
   costruisciPassi,
@@ -98,7 +99,12 @@ const corpo = "font-serif text-lg text-foreground/90 leading-relaxed"
 
 // In italiano San Giuseppe e i defunti riusano i blocchi di /preghiere, in
 // latino hanno un testo loro. Se un testo latino manca si mostra l'italiano.
-function testoDi(id: PreghieraId | PreghieraCondivisa, lingua: Lingua): Testo | null {
+function testoDi(
+  id: PreghieraId | PreghieraCondivisa,
+  lingua: Lingua,
+  credoLungo: boolean,
+): Testo | null {
+  if (id === "credo" && credoLungo && credoNiceno[lingua]) return credoNiceno[lingua]!
   if (lingua === "la" && testiLa[id]) return testiLa[id]!
   if (id in condivise) return null
   return testi[id as PreghieraId]
@@ -162,6 +168,7 @@ export function Rosario() {
   const [i, setI] = useState(0)
   const [scelta, setScelta] = useState<Serie>("gaudiosi")
   const [lingua, setLingua] = useState<Lingua>("it")
+  const [credoLungo, setCredoLungo] = useState(false)
   const [diOggi, setDiOggi] = useState<Serie | null>(null)
   const [pronto, setPronto] = useState(false)
   const pannello = useRef<HTMLDivElement>(null)
@@ -183,6 +190,7 @@ export function Rosario() {
         salvato.passo >= 0 &&
         salvato.passo < passi.length
       if (salvato && (salvato.lingua === "it" || salvato.lingua === "la")) setLingua(salvato.lingua)
+      if (salvato && typeof salvato.credoLungo === "boolean") setCredoLungo(salvato.credoLungo)
       if (valido) {
         setScelta(salvato.serie)
         setI(salvato.passo)
@@ -199,9 +207,9 @@ export function Rosario() {
     if (!pronto) return
     localStorage.setItem(
       CHIAVE,
-      JSON.stringify({ giorno: oggiChiave(new Date()), serie: scelta, passo: i, lingua }),
+      JSON.stringify({ giorno: oggiChiave(new Date()), serie: scelta, passo: i, lingua, credoLungo }),
     )
-  }, [pronto, scelta, i, lingua])
+  }, [pronto, scelta, i, lingua, credoLungo])
 
   const vai = useCallback(
     (n: number) => setI(Math.max(0, Math.min(passi.length - 1, n))),
@@ -238,7 +246,7 @@ export function Rosario() {
   const testo =
     passo.preghiera === "mistero"
       ? null
-      : testoDi(passo.preghiera as PreghieraId | PreghieraCondivisa, lingua)
+      : testoDi(passo.preghiera as PreghieraId | PreghieraCondivisa, lingua, credoLungo)
   const fatti = useMemo(() => new Set(passi.slice(0, i).map((p) => p.grano)), [passi, i])
 
   const statoDi = (id: string) =>
@@ -475,6 +483,29 @@ export function Rosario() {
                 </h2>
                 {passo.nota && (
                   <p className="font-serif italic text-base text-foreground/60">{passo.nota}</p>
+                )}
+
+                {passo.preghiera === "credo" && (
+                  <div className="inline-flex border border-secondary/25" role="group" aria-label="Quale Credo">
+                    {([[false, "APOSTOLICO"], [true, "NICENO"]] as const).map(([lungo, etichetta], idx) => {
+                      const attivo = credoLungo === lungo
+                      return (
+                        <button
+                          key={etichetta}
+                          type="button"
+                          aria-pressed={attivo}
+                          onClick={() => setCredoLungo(lungo)}
+                          className={[
+                            "min-h-[38px] px-4 font-display text-[0.7rem] tracking-[0.15em] transition-colors",
+                            idx === 1 ? "border-l border-secondary/25" : "",
+                            attivo ? "bg-card/80 text-secondary" : "text-foreground/55 hover:text-foreground/85",
+                          ].join(" ")}
+                        >
+                          {etichetta}
+                        </button>
+                      )
+                    })}
+                  </div>
                 )}
                 {testo ? (
                   <TestoPreghiera t={testo} id={passo.preghiera} />
