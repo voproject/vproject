@@ -14,6 +14,13 @@ const percorsi = [
   { href: "/preghiere/mattino", sopra: "PREGHIERE DEL", nome: "MATTINO", sotto: "Al risveglio" },
   { href: "/preghiere/sera", sopra: "PREGHIERE DELLA", nome: "SERA", sotto: "Prima di dormire" },
   {
+    href: "/preghiere/confessione",
+    sopra: "GUIDA ALLA",
+    nome: "CONFESSIONE",
+    sotto: "Cinque passi, con l'esame di coscienza",
+    largo: true,
+  },
+  {
     href: "/preghiere/rosario",
     sopra: "IL SANTO",
     nome: "ROSARIO",
