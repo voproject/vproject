@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import { Cross, Instagram } from "lucide-react"
+import { Cross, Globe, Instagram } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Link | VolpinVeritas",
@@ -28,12 +28,14 @@ function TikTokIcon({ className }: { className?: string }) {
 const IG = "https://instagram.com/volpinveritas"
 const X = "https://x.com/volpinveritas"
 const TIKTOK = "https://www.tiktok.com/@volpinveritas"
+const OPHANIM = "https://ophanimai.com/it"
 
 const links = [
   { href: "/preghiere", label: "PREGHIERE GIORNALIERE", Icon: Cross, external: false, primary: true },
   { href: IG, label: "INSTAGRAM", Icon: Instagram, external: true },
   { href: X, label: "X", Icon: XIcon, external: true },
   { href: TIKTOK, label: "TIKTOK", Icon: TikTokIcon, external: true },
+  { href: OPHANIM, label: "OPHANIM AI", Icon: Globe, external: true },
 ]
 
 const social = [
@@ -44,7 +46,7 @@ const social = [
 
 export default function LinkPage() {
   return (
-    <main className="relative min-h-[100svh] w-full overflow-hidden bg-background text-foreground flex items-center justify-center py-16 px-5">
+    <main className="relative min-h-[100svh] w-full overflow-hidden bg-background text-foreground flex items-center justify-center py-12 px-5">
       {/* Plain dark ground. A photo behind this much dimming only ever showed
           as a stray bright band across the middle, which read as a mistake, so
           the depth comes from a single soft glow behind the portrait instead. */}
