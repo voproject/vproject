@@ -21,6 +21,13 @@ const percorsi = [
     largo: true,
   },
   {
+    href: "/preghiere/santa-brigida",
+    sopra: "LE 15 ORAZIONI DI",
+    nome: "SANTA BRIGIDA",
+    sotto: "Una orazione alla volta, ogni giorno",
+    largo: true,
+  },
+  {
     href: "/preghiere/rosario",
     sopra: "IL SANTO",
     nome: "ROSARIO",
