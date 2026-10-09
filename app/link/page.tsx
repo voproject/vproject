@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import { Cross, Globe, Instagram } from "lucide-react"
+import { Cross, Instagram } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Link | VolpinVeritas",
@@ -25,6 +25,14 @@ function TikTokIcon({ className }: { className?: string }) {
   )
 }
 
+// Il logo di Ophanim, con il nero reso trasparente perche' il quadrato non
+// si veda dentro al pulsante.
+function OphanimIcon({ className }: { className?: string }) {
+  return (
+    <Image src="/ophanim-logo.png" alt="" width={36} height={36} className={className} aria-hidden="true" />
+  )
+}
+
 const IG = "https://instagram.com/volpinveritas"
 const X = "https://x.com/volpinveritas"
 const TIKTOK = "https://www.tiktok.com/@volpinveritas"
@@ -35,7 +43,7 @@ const links = [
   { href: IG, label: "INSTAGRAM", Icon: Instagram, external: true },
   { href: X, label: "X", Icon: XIcon, external: true },
   { href: TIKTOK, label: "TIKTOK", Icon: TikTokIcon, external: true },
-  { href: OPHANIM, label: "OPHANIM AI", Icon: Globe, external: true },
+  { href: OPHANIM, label: "OPHANIM AI", Icon: OphanimIcon, external: true },
 ]
 
 const social = [
