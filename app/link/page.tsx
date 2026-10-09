@@ -29,7 +29,14 @@ function TikTokIcon({ className }: { className?: string }) {
 // si veda dentro al pulsante.
 function OphanimIcon({ className }: { className?: string }) {
   return (
-    <Image src="/ophanim-logo.png" alt="" width={36} height={36} className={className} aria-hidden="true" />
+    <Image
+      src="/ophanim-logo.png"
+      alt=""
+      width={56}
+      height={56}
+      className={`${className} object-contain`}
+      aria-hidden="true"
+    />
   )
 }
 
@@ -43,7 +50,8 @@ const links = [
   { href: IG, label: "INSTAGRAM", Icon: Instagram, external: true },
   { href: X, label: "X", Icon: XIcon, external: true },
   { href: TIKTOK, label: "TIKTOK", Icon: TikTokIcon, external: true },
-  { href: OPHANIM, label: "OPHANIM AI", Icon: OphanimIcon, external: true },
+  // Il logo ha tratti sottili e alla misura delle altre icone si perdeva.
+  { href: OPHANIM, label: "OPHANIM AI", Icon: OphanimIcon, external: true, misuraIcona: "w-7 h-7" },
 ]
 
 const social = [
@@ -110,7 +118,7 @@ export default function LinkPage() {
 
         {/* Links. Our own pages open in the same tab; only the socials open a new one. */}
         <nav className="mt-9 flex flex-col gap-3.5">
-          {links.map(({ href, label, Icon, primary, external }) => (
+          {links.map(({ href, label, Icon, primary, external, misuraIcona }) => (
             <a
               key={label}
               href={href}
@@ -123,7 +131,7 @@ export default function LinkPage() {
               ].join(" ")}
             >
               <Icon
-                className={`absolute left-5 w-[18px] h-[18px] ${
+                className={`absolute left-5 ${misuraIcona ?? "w-[18px] h-[18px]"} ${
                   primary ? "text-primary-foreground/80" : "text-secondary/70"
                 }`}
               />
